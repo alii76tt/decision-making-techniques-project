@@ -22,4 +22,4 @@ Karar Verme Teknikleri dersi içerisinde öğrenilen belirsizlik altında karar 
 
 # Ekran Görüntüsü
 
-![1](/screenshots/enterValue.png)
+![1](/screenshots/enterValues.png)
