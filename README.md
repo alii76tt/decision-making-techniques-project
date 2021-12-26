@@ -1,25 +1,28 @@
-# Karar Verme Teknikleri Proje
-Karar Verme Teknikleri dersi içerisinde öğrenilen belirsizlik altında karar verme ölçütlerini algoritmalarını kullanarak Java programlama dili kullanılarak koda dökülmesi.
+# Decision Making Techniques Project
+
+[Turkish Readme](https://github.com/alii76tt/decision-making-techniques-project/blob/main/README_TR.md)
+
+Putting the decision criteria under uncertainty learned in the Decision Making Techniques course into code using the Java programming language using algorithms.
 <br/>
 
-# Program Akışı
+# Program Flow
 
-–	Kullanıcı dil seçimi.
-–	Tablonun oluşturulması için alternatif ve doğal durum sayısı alınır.
-–	Alternatif ve doğal durumların isimleri girilir.
-–	Tablo değerleri sıradaki alternatif ve doğal durum için girilir.
-–	Tablonun misali görünümü.
-–	Problemin maliyet mi yoksa getir yapılı olduğu değer girilir(E/H).
-–	Hurwics için gerekli alfa değeri girildikten sonra sonuçlar gösterilir.
+– User language selection. 
+– The number of alternative and natural states is taken to create the table. 
+– The names of alternative and natural states are entered. 
+– Table values are entered for the next alternative and natural state. 
+– Exemplary view of the table. 
+– The value of whether the problem is cost or return is entered (Y/N). 
+– After entering the required alpha for Hurwics, the results are shown.
 
-# Özellikleri
+# Properties
 
-– İyimserlik (Maximax)
-– Kötümserlik
-– Eş olasılık (Laplace)
-– Hurwicz
-– Pişmanlık (Savage) (Hatalı çalışmaktadır.)
+– Optimism (Maximax) 
+– Pessimism 
+– Equivalent (Laplace) 
+– Hurwicz 
+– Regret (Savage) (It works incorrectly.)
 
-# Ekran Görüntüsü
+# Screenshot
 
 ![1](/screenshots/enterValues.png)
