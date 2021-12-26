@@ -4,21 +4,21 @@ Karar Verme Teknikleri dersi içerisinde öğrenilen belirsizlik altında karar 
 
 # Program Akışı
 
-–	Kullanıcı dil seçimi.
-–	Tablonun oluşturulması için alternatif ve doğal durum sayısı alınır.
-–	Alternatif ve doğal durumların isimleri girilir.
-–	Tablo değerleri sıradaki alternatif ve doğal durum için girilir.
-–	Tablonun misali görünümü.
-–	Problemin maliyet mi yoksa getir yapılı olduğu değer girilir(E/H).
-–	Hurwics için gerekli alfa değeri girildikten sonra sonuçlar gösterilir.
+-	Kullanıcı dil seçimi.
+-	Tablonun oluşturulması için alternatif ve doğal durum sayısı alınır.
+-	Alternatif ve doğal durumların isimleri girilir.
+-	Tablo değerleri sıradaki alternatif ve doğal durum için girilir.
+-	Tablonun misali görünümü.
+-	Problemin maliyet mi yoksa getir yapılı olduğu değer girilir(E/H).
+-	Hurwics için gerekli alfa değeri girildikten sonra sonuçlar gösterilir.
 
 # Özellikleri
 
-– İyimserlik (Maximax)
-– Kötümserlik
-– Eş olasılık (Laplace)
-– Hurwicz
-– Pişmanlık (Savage) (Hatalı çalışmaktadır.)
+- İyimserlik (Maximax)
+- Kötümserlik
+- Eş olasılık (Laplace)
+- Hurwicz
+- Pişmanlık (Savage) (Hatalı çalışmaktadır.)
 
 # Ekran Görüntüsü
 
