@@ -2,7 +2,7 @@
 
 [Turkish Readme](https://github.com/alii76tt/decision-making-techniques-project/blob/main/README_TR.md)
 
-Putting the decision criteria under uncertainty learned in the Decision Making Techniques course into code using the Java programming language using algorithms.
+Encoding the decision criteria under uncertainty learned in the Decision Making Techniques course by using Java and Python programming languages.
 <br/>
 
 # Program Flow

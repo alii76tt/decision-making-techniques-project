@@ -66,7 +66,7 @@ public class Language {
             {
                 Transactions.theCostOfOptimism(numberOfAlternatives, numberOfNaturalStates, table, alternativesNames, alternativeName, "TR");
                 Transactions.theCostOfPessimism(numberOfAlternatives, numberOfNaturalStates, table, alternativesNames, alternativeName, "TR");
-                //Transactions.theCostOfEqualProbability(numberOfAlternatives, numberOfNaturalStates, table, alternativesNames, alternativeName, "TR");
+                Transactions.theCostOfEqualProbability(numberOfAlternatives, numberOfNaturalStates, table, alternativesNames, alternativeName, "TR");
                 Transactions.theCostOfHurwicz(numberOfAlternatives, numberOfNaturalStates, table, alternativesNames, alternativeName, "TR");
                 Transactions.savage(numberOfAlternatives, numberOfNaturalStates, table, alternativesNames, alternativeName, "TR");
                 break;

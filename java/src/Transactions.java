@@ -42,25 +42,28 @@ public class Transactions
     public static void theCostOfPessimism(int numberOfAlternatives, int numberOfNaturalStates, int[][] table, String[] alternativeNames, String alternativeName, String language) {
         String name;
         int[] newValues = new  int[numberOfAlternatives];
-        int max;
-        int newValue = -2000;
+        int min;
+        int newValue = newValues[0];
 
         for (int i = 0; i < numberOfAlternatives; i++) {
+            min = table[i][0];
             for (int j = 0; j < numberOfNaturalStates; j++) {
-                max = table[i][j];
-                if (max < table[i][j]) {
-                    max = table[i][j];
+                if (min > table[i][j]) {
+                    min = table[i][j];
                 }
-                newValues[i] = max;
             }
-            alternativeName = alternativeNames[i];
+
+            newValues[i] = min;
+            for (int k : newValues) {
+                if (newValue <= k) {
+                    newValue = k;
+                    alternativeName = alternativeNames[i];
+
+                }
+            }
         }
 
-        for (int i : newValues) {
-            if (newValue <= i) {
-                newValue = i;
-            }
-        }
+
 
         name = getName(language, "Kotümserlik", "Pessimist");
         getResult(name, alternativeName, language, newValue);
@@ -68,25 +71,25 @@ public class Transactions
     public static void theProfitOfPessimism(int numberOfAlternatives, int numberOfNaturalStates, int[][] table, String[] alternativeNames, String alternativeName, String language) {
         String name;
         int[] newValues = new  int[numberOfAlternatives];
-        int max = table[0][1];
-        int newValue = 2000;
+        int newValue;
 
         for (int i = 0; i < numberOfAlternatives; i++) {
-
+            newValues[i] = table[i][0];
             for (int j = 0; j < numberOfNaturalStates; j++) {
-                if (max < table[i][j]) {
-                    max = table[i][j];
+                if (table[i][j] < newValues[i]) {
+                    newValues[i] = table[i][j];
                 }
-                newValues[i] = max;
-                max = table[i][j];
             }
-            alternativeName = alternativeNames[i];
-        }
 
-        for (int i : newValues) {
-            if (newValue >= i) {
-                newValue = i;
+        }
+        newValue = newValues[0];
+        int counter = 0;
+        for (int k : newValues) {
+            if (newValue <= k) {
+                newValue = k;
             }
+            alternativeName = alternativeNames[counter];
+            counter += 1;
         }
 
         name = getName(language, "Kotümserlik", "Pessimist");
@@ -94,7 +97,7 @@ public class Transactions
     }
 
     // error
-    /*public static void theCostOfEqualProbability(int numberOfAlternatives, int numberOfNaturalStates, int[][] table, String[] alternativeNames, String alternativeName, String language) {
+    public static void theCostOfEqualProbability(int numberOfAlternatives, int numberOfNaturalStates, int[][] table, String[] alternativeNames, String alternativeName, String language) {
         String name;
         double min = 0;
         double[] min1 = new double[numberOfAlternatives];
@@ -118,7 +121,7 @@ public class Transactions
         }
         name = getName(language, "Eş Olasılık", "Probability");
         getResult(name, alternativeName, language, (int) min);
-    }*/
+    }
     public static void theProfitOfEqualProbability(int numberOfAlternatives, int numberOfNaturalStates, int[][] table, String[] alternativeNames, String alternativeName, String language) {
         String name;
         double max = 0;
@@ -220,8 +223,10 @@ public class Transactions
         getResult(name, alternativeName, language, (int) max);
     }
 
+    // error
     public  static void savage(int numberOfAlternatives, int numberOfNaturalStates, int[][] table, String[] alternativeNames, String alternativeName, String language){
         String name;
+        int x=0;
         int savage = table[0][0];
         int max1 = table[0][0];
         int[][] savageTable = new int[numberOfAlternatives][numberOfNaturalStates];
@@ -229,14 +234,14 @@ public class Transactions
         if (numberOfNaturalStates <=2){
             for (int i = 0; i < numberOfAlternatives; i++) {
                 for (int j = 0; j < numberOfNaturalStates; j++) {
-                    //
+                    x=table[j][i];
+                    System.out.println(x);
                     if (table[i][1] > table[i][0]) {
                         max1 = table[i][1];
                     }
-                    for (int k = 0; k < numberOfNaturalStates; k++) {
-                        savageTable[j][k] = max1 - table[j][k];
-                    }
+                    savageTable[i][j] = max1 - table[i][j];
                 }
+
             }
 
             for (int i = 0; i < numberOfAlternatives; i++) {
@@ -269,7 +274,7 @@ public class Transactions
         }
 
         name = getName(language, "Pişmanlık", "Savage");
-        getResult(name, alternativeName, language, (int) savage);
+        getResult(name, alternativeName, language,  savage);
     }
 
     private static String getName(String language, String nameTR, String nameEN) {

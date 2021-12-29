@@ -1,5 +1,5 @@
 # Karar Verme Teknikleri Proje
-Karar Verme Teknikleri dersi içerisinde öğrenilen belirsizlik altında karar verme ölçütlerini algoritmalarını kullanarak Java programlama dili kullanılarak koda dökülmesi.
+Karar Verme Teknikleri dersinde öğrenilen belirsizlik altında karar kriterlerinin Java ve Python programlama dilleri kullanılarak kodlanması.
 <br/>
 
 # Program Akışı
