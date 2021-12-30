@@ -92,7 +92,7 @@ class Transactions:
                     hurwiczValue = float(input("Lütfen hurwics değerini giriniz(Nokta kullanınız orn:0.2): "))
                 else:
                     hurwiczValue = float(input("Please enter the hurwicz value (Use a dot ex:0.2): "))
-
+                print()
                 if hurwiczValue < 0 or hurwiczValue > 1:
                     if self.language == "TR" or self.language == "tr":
                         print("Alfa değerini kontrol ediniz!")
@@ -114,6 +114,6 @@ class Transactions:
 
     def getResult(self, name, alternativeName, value):
         if self.language == "TR" or self.language == "tr":
-            print("(" + name + ") Seçilebilecek en iyi karar: " + alternativeName + " alternatifi ve değeri: " + str(value))
+            print("(" + name + ") Seçilebilecek en iyi karar: " + alternativeName + " alternatifi ve değeri: " + str(value) + "\n")
         else:
-            print("(" + name + ") Best decision to choose: " + alternativeName + " alternative and value: " + str(value))
+            print("(" + name + ") Best decision to choose: " + alternativeName + " alternative and value: " + str(value) + "\n")

@@ -49,6 +49,7 @@ class Language:
         print()
         while True:
             choice = str(input("Probleminiz maliyet mi(E/H): "))
+            print()
             if choice == "e" or choice == "E":
                 transactionsCost = Transactions(language="tr", table=table, isCost=True,
                                             alternativesNames=alternativesNames)
@@ -113,7 +114,7 @@ class Language:
         print()
         while True:
             choice = str(input("Is the problem type cost?(Y/N): "))
-
+            print()
             if choice == "y" or choice == "Y":
                 transactionsCost = Transactions(language=self.language, table=table, isCost=True,
                                                 alternativesNames=alternativesNames)
