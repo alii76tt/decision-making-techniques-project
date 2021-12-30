@@ -34,7 +34,7 @@ class Transactions:
             alternativeName = max(self.alternativesNames)
             result = min(minValues)
         else:
-            alternativeName = min(self.alternativesNames)
+            alternativeName = min(max(self.alternativesNames))
             result = max(minValues)
 
         name = Transactions.getName(self, nameTR="Kötümserlik", nameEN="Pessimist")
@@ -43,10 +43,14 @@ class Transactions:
     def hurwicz(self):
         hurwiczTable = []
         hurwiczValue = Transactions.getAlfa(self)
+
+        counter = 0
         for item in self.table:
+            alternativeName = self.alternativesNames[counter]
             resultHurwicz = (max(item) * hurwiczValue + min(item) * (1 - hurwiczValue))
             hurwiczTable.append(resultHurwicz)
             resultHurwicz = 0
+            counter += 1
 
         if self.isCost:
             alternativeName = min(self.alternativesNames)

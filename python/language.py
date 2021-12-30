@@ -41,6 +41,7 @@ class Language:
         # show table
         print("Tablo misali görünüm\n")
         counter = 0
+        print(" "*5 + str(naturalStatesNames))
         for item in table:
             print("\r" + alternativesNames[counter] + " --> " + str(item))
             counter += 1
@@ -104,6 +105,7 @@ class Language:
         # show table
         print("Looks like your table\n")
         counter = 0
+        print(" "*5 + str(naturalStatesNames))
         for item in table:
             print("\r" + alternativesNames[counter] + " --> " + str(item))
             counter += 1
