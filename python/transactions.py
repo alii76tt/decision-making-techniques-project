@@ -7,14 +7,20 @@ class Transactions:
 
     def optimism(self):
         maxValues = []
+        minValues = []
+
         counter = 0
         for i in self.table:
             maxValues.append([max(i)])
             counter += 1
+
+        for i in self.table:
+            minValues.append([min(i)])
+            counter += 1
         
         if self.isCost:
             alternativeName = min(self.alternativesNames)
-            result = min(maxValues)
+            result = min(minValues)
         else:
             alternativeName = min(self.alternativesNames)
             result = max(maxValues)
@@ -24,15 +30,19 @@ class Transactions:
 
     def pessimism(self):
         minValues = []
-
+        maxValues = []
         counter = 0
         for i in self.table:
             minValues.append([min(i)])
             counter += 1
+        
+        for i in self.table:
+            maxValues.append([max(i)])
+            counter += 1
 
         if self.isCost:
             alternativeName = max(self.alternativesNames)
-            result = min(minValues)
+            result = min(maxValues)
         else:
             alternativeName = min(max(self.alternativesNames))
             result = max(minValues)
